@@ -18,13 +18,15 @@ class CreateExpedientesTable extends Migration
             $table->integer ('user_id')->unsigned ();
             $table->integer ('tipo_id')->unsigned ();
             $table->dateTime ('fecha_creacion');
-            $table->string ('nombre');
+            $table->integer ('cliente_id');
+            $table->integer ('proveedor_id');
+            $table->integer ('ot_id');
+            $table->string ('referencia')->nullable ();
+            $table->integer ('monto');
+            $table->string ('notas');
+
             $table->timestamps();
 
-            $table->foreign ('user_id')->references ('id')
-                ->on ('users')->onDelete ('cascade');
-            $table->foreign ('tipo_id')->references ('id')
-                ->on ('tipoexpedientes')->onDelete ('cascade');
         });
     }
 

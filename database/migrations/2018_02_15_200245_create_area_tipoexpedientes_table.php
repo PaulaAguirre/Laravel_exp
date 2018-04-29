@@ -19,9 +19,6 @@ class CreateAreaTipoexpedientesTable extends Migration
             $table->integer ( 'area_id' )->unsigned ();
             $table->timestamps ();
 
-            $table->foreign ( 'tipoexpediente_id' )->references ( 'id' )->on ( 'tipoexpedientes' )->onDelete ( 'cascade' );
-            $table->foreign ( 'area_id' )->references ( 'id' )->on ( 'areas' )->onDelete ( 'cascade' );
-
         });
     }
 

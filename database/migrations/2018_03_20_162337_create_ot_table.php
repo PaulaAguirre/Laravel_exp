@@ -15,9 +15,9 @@ class CreateOtTable extends Migration
     {
         Schema::create('ot', function (Blueprint $table) {
             $table->increments('id');
-            $table->string ('ot');
+            $table->string ('codigo');
             $table->string ('obra');
-            $table->string ('descripcion')->nullable ();
+            $table->string ('referencia')->nullable ();
             $table->timestamps();
         });
     }

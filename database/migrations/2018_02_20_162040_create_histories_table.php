@@ -18,15 +18,12 @@ class CreateHistoriesTable extends Migration
             $table->integer ('expediente_id')->unsigned ();
             $table->integer ('area_id')->unsigned ();
             $table->string ('estado')->nullable ()->default ('pendiente');
-            $table->string ('motivo')->nullable ()->default ('ok');
             $table->dateTime ('fecha_entrada');
             $table->string ('observaciones')->nullable ();
+            $table->string ('observaciones_regularizacion')->nullable ();
+            $table->integer ('aprobado_por');
             $table->timestamps();
 
-            $table->foreign ('expediente_id')->references ('id')
-                ->on ('expedientes')->onDelete ('cascade');
-            $table->foreign ('area_id')->references ('id')
-                ->on ('areas')->onDelete ('cascade');
         });
     }
 
