@@ -158,11 +158,11 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="{{url('expedientes')}}"><i class="fa fa-book"></i>Mis Expedientes Creados</a></li>
-                        <li><a href="{{url('expedientes_rechazados/expedientes_rechazados_creador')}}"><i class="fa fa-book"></i>Mis Expedientes Rechazados</a></li>
+                        <li><a href="{{url('expedientes')}}"><i class="fa fa-folder"></i>Mis Expedientes Creados</a></li>
+                        <li><a href="{{url('expedientes_rechazados/expedientes_rechazados_creador')}}"><i class="fa fa-folder"></i>Mis Expedientes Rechazados</a></li>
                         @if(in_array (Auth::user ()->role_id, [1,2,3] ))
-                            <li><a href="{{url ('aprobacion_expedientes/expedientes_pendientes')}}"><i class="fa fa-book"></i>Expedientes a Aprobar</a></li>
-                            <li><a href="{{url ('expedientes_por_areas')}}"><i class="fa fa-book"></i>Expedientes por Areas</a></li>
+                            <li><a href="{{url ('aprobacion_expedientes/expedientes_pendientes')}}"><i class="fa fa-folder"></i>Expedientes a Aprobar</a></li>
+                            <li><a href="{{url ('expedientes_por_areas')}}"><i class="fa fa-folder"></i>Expedientes por Areas</a></li>
                         @endif
                     </ul>
                 </li>
@@ -173,7 +173,7 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="/users/{{auth ()->id ()}}/edit"><i class="fa fa-circle-o"></i>Mi Cuenta</a></li>
+                        <li><a href="/users/{{auth ()->id ()}}/edit"><i class="fa fa-user"></i>Mi Cuenta</a></li>
 
                     </ul>
                 </li>
