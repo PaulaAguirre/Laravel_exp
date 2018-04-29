@@ -162,7 +162,7 @@
                         <li><a href="{{url('expedientes_rechazados/expedientes_rechazados_creador')}}"><i class="fa fa-book"></i>Mis Expedientes Rechazados</a></li>
                         @if(in_array (Auth::user ()->role_id, [1,2,3] ))
                             <li><a href="{{url ('aprobacion_expedientes/expedientes_pendientes')}}"><i class="fa fa-book"></i>Expedientes a Aprobar</a></li>
-                            <li><a href="{{url ('expedientes_por_areas')}}">Expedientes por Areas<i class="fa fa-book"></i></a></li>
+                            <li><a href="{{url ('expedientes_por_areas')}}"><i class="fa fa-book"></i>Expedientes por Areas</a></li>
                         @endif
                     </ul>
                 </li>
